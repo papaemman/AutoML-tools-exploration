@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "cells": [
+    {
+      "type": "cs",
+      "input": "assist"
+    },
+    {
+      "type": "cs",
+      "input": "importFiles"
+    },
+    {
+      "type": "cs",
+      "input": "importFiles [ \"/home/user7/Dropbox/Medoid Ai/R_projects/H2O_tutorial/yt-tutorials/datasets/flights.csv\" ]"
+    },
+    {
+      "type": "cs",
+      "input": "setupParse source_frames: [ \"nfs://home/user7/Dropbox/Medoid Ai/R_projects/H2O_tutorial/yt-tutorials/datasets/flights.csv\" ]"
+    },
+    {
+      "type": "cs",
+      "input": "parseFiles\n  source_frames: [\"nfs://home/user7/Dropbox/Medoid Ai/R_projects/H2O_tutorial/yt-tutorials/datasets/flights.csv\"]\n  destination_frame: \"flights.hex\"\n  parse_type: \"CSV\"\n  separator: 44\n  number_columns: 31\n  single_quotes: false\n  column_names: [\"Year\",\"Month\",\"DayofMonth\",\"DayOfWeek\",\"DepTime\",\"CRSDepTime\",\"ArrTime\",\"CRSArrTime\",\"UniqueCarrier\",\"FlightNum\",\"TailNum\",\"ActualElapsedTime\",\"CRSElapsedTime\",\"AirTime\",\"ArrDelay\",\"DepDelay\",\"Origin\",\"Dest\",\"Distance\",\"TaxiIn\",\"TaxiOut\",\"Cancelled\",\"CancellationCode\",\"Diverted\",\"CarrierDelay\",\"WeatherDelay\",\"NASDelay\",\"SecurityDelay\",\"LateAircraftDelay\",\"IsArrDelayed\",\"IsDepDelayed\"]\n  column_types: [\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Enum\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Numeric\",\"Enum\",\"Enum\"]\n  delete_on_done: true\n  check_header: 1\n  chunk_size: 15418368"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"flights.hex\""
+    },
+    {
+      "type": "cs",
+      "input": "assist splitFrame, \"flights.hex\""
+    },
+    {
+      "type": "cs",
+      "input": "splitFrame \"flights.hex\", [0.75], [\"frame_0.750\",\"frame_0.250\"], 206536"
+    },
+    {
+      "type": "cs",
+      "input": "getFrameSummary \"frame_0.750\""
+    },
+    {
+      "type": "cs",
+      "input": "getColumnSummary \"frame_0.750\", \"ActualElapsedTime\""
+    },
+    {
+      "type": "cs",
+      "input": "getColumnSummary \"frame_0.750\", \"IsArrDelayed\""
+    },
+    {
+      "type": "cs",
+      "input": "assist buildModel, null, training_frame: \"frame_0.750\""
+    },
+    {
+      "type": "cs",
+      "input": "buildModel 'glm', {\"model_id\":\"glm-868c0cc1-2f82-42de-9f35-e3aa241d46f7\",\"training_frame\":\"frame_0.750\",\"validation_frame\":\"frame_0.250\",\"nfolds\":0,\"seed\":-1,\"response_column\":\"IsArrDelayed\",\"ignored_columns\":[\"DepTime\",\"CRSDepTime\",\"ArrTime\",\"CRSArrTime\",\"UniqueCarrier\",\"FlightNum\",\"TailNum\",\"ActualElapsedTime\",\"CRSElapsedTime\",\"AirTime\",\"ArrDelay\",\"DepDelay\",\"TaxiIn\",\"TaxiOut\",\"Cancelled\",\"CancellationCode\",\"Diverted\",\"CarrierDelay\",\"WeatherDelay\",\"NASDelay\",\"SecurityDelay\",\"LateAircraftDelay\",\"IsDepDelayed\"],\"ignore_const_cols\":true,\"family\":\"binomial\",\"solver\":\"AUTO\",\"alpha\":[],\"lambda\":[],\"lambda_search\":false,\"standardize\":true,\"non_negative\":false,\"obj_reg\":-1,\"score_each_iteration\":false,\"compute_p_values\":false,\"remove_collinear_columns\":false,\"max_iterations\":-1,\"link\":\"family_default\",\"export_checkpoints_dir\":\"\",\"max_runtime_secs\":0,\"custom_metric_func\":\"\",\"missing_values_handling\":\"MeanImputation\",\"intercept\":true,\"objective_epsilon\":-1,\"beta_epsilon\":0.0001,\"gradient_epsilon\":-1,\"prior\":-1,\"max_active_predictors\":-1,\"interactions\":[],\"interaction_pairs\":[]}"
+    },
+    {
+      "type": "cs",
+      "input": "getModel \"glm-868c0cc1-2f82-42de-9f35-e3aa241d46f7\""
+    }
+  ]
+}

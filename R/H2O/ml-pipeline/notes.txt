@@ -1,0 +1,3 @@
+Tutorial based on h2o Rbooklet documentation:
+https://drive.google.com/drive/u/0/folders/1f0Nb9g3VfW5T6PKckwvbg4awbvS8-jH6
+
