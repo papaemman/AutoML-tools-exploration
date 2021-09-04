@@ -14,4 +14,4 @@
 
 ## Organizations
 
-AutoML-Freiburg-Hannover: 
+AutoML-Freiburg-Hannover: https://github.com/automl
