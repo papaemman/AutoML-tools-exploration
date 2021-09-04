@@ -1,5 +1,7 @@
 # AutoML-tools-exploration
 
+<img alt="AutoML-tools" src="https://github.com/papaemman/AutoML-tools-exploration/blob/master/assets/AutoML-tools-and-frameworks.png>
+                     
 ## Automated Machine Learning libraries for Python and R
 
 1. **H2O**: https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html
