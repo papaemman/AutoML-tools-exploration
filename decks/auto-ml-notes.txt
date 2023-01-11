@@ -1,0 +1,164 @@
+==================================
+Automated Machine Learning, Notes
+==================================
+
+1. Open Source AutoML tools
+2. Commercial AutoML tools
+3. Auto ML applications
+4. Auto ML competitions
+5. 
+
+3 Types of AutoML Solution Providers
+- Open Source
+- Startups
+- Tech giants
+
+
+Companies Mentioned
+
+DataRobot Inc.
+H2O.ai Inc.
+dotData Inc.
+EdgeVerve Systems Limited
+Amazon Web Services Inc.
+Squark
+Big Squid Inc.
+SAS Institute Inc.
+Microsoft Corporation
+	Determined AI
+
+
+-----------------------------------------------------------------------
+
+// Open source AutoML tools //
+
+1. auto-sklearn [Python] - 2016
+model selection
+hyperparameter tuning
+Bayesian optimization over a fixed 3-step ML pipeline
+feature engineering (!)
+github.com/automl/auto-sklearn
+
+
+2. auto-Weka [Java] - 2013
+Similar to auto-sklearn, but built on top of Weka
+github.com/automl/autoweka
+
+3. TPOT [Python] - 2015
+Genetic Programming over a configurable ML pipeline
+github.com/rhiever/tpot
+
+4. H2O.ai AutoML [Java w/ Python, Scala, & R APIs and web GUI] - 2017 
+Basic data prep w/ mix of grid and random search over ML algorithms
+github.com/h2oai/h2o-3
+
+5. devol [Python]
+Deep Learning architecture search via Genetic Programming
+github.com/joeddav/devol
+
+6. MLBox (Machine Learning box) - Python - 2017
+https://github.com/AxeldeRomblay/MLBox
+https://mlbox.readthedocs.io/en/latest/
+- Data cleaning (it can automatically merge several datasets at once)
+- Hyperparameter selection
+- Model selection
+
+Examples: Running "MLBox" auto-ML package on House Prices: Advanced Regression Techniques, Kaggle
+
+7. Auto-keras - 2017
+- same api as auto-sklearn
+https://autokeras.com/
+
+8. Uber Ludwig - 2019
+- Deep learning pipeline
+https://uber.github.io/ludwig/
+https://www.youtube.com/watch?v=w45t3itM5NM
+
+9. Featuretools - 2017
+https://www.featuretools.com/
+
+
+Data Science automation
+
+dotdata: https://dotdata.com/
+
+tazi ai: https://www.tazi.ai/
+
+dataiku: https://www.dataiku.com/
+
+-----------------------------------------------------------------------
+
+
+// AutoMLaaS: Commercial AutoML tools //
+
+1. DataRobot - 2015
+2015 Launched the world’s first automated machine learning solution
+Web-based interface
+Fixed search over thousands of ML pipelines
+
+2. H2O.ai Driverless AI - 2017
+Web-based interface
+H2O.ai AutoML + better feature construction
+
+3. Google AutoML - 2018
+Integrated in the Google Cloud Compute platform
+DNN architecture search
+
+4. SAS Factory Miner - 2016
+Fixed search over a handful of ML methods
+
+5. IBM SPSS Modeler - 2018
+Basic automated data preparation and ML modeling
+
+
+6. Microsoft (Azure) - 2018
+
+
+6. AWS - 2019
+Amazon SageMaker Autopilot – Automatically Create High-Quality Machine Learning Models With Full Control And Visibility
+
+
+7. BigML auto ML tools - 2019
+
+-----------------------------------------------------------------------
+
+// Auto ML applications //
+
+
+1. Differential Architecture search
+https://arxiv.org/abs/1806.09055
+https://github.com/quark0/darts
+
+
+2. Hyperparameter tuning
+
+
+3. Feature Generation
+
+
+4. Feature Selection
+
+
+5. 
+
+
+
+-----------------------------------------------------------------------
+
+// Competitions for AutoML solutions //
+
+https://competitions.codalab.org/competitions/19836
+
+This competition is different from classical Kaggle competition, you must send your code in a docker container, and then the code runs on a server, trains model on closed datasets and tests it. It's similar to ACM ICPC competitions because you send code instead of a CSV file.
+The competition dataset is closed and developers cant see it. The model evaluates on real banks data.
+The program receives at the entrance input train or test dataset name, task type (binary classification or regression) and calculation time limit. A program must train ML-model for a given time on a train set, and then make a prediction for a test set for the same time.
+I think that machine learning competitions must transform from Kaggle-like competitions to docker-like.
+
+
+
+https://github.com/dvatterott/explore_feature_automation/tree/0123504227fc3ba8499d04c080745a86e6b1d0ec
+https://towardsdatascience.com/why-automated-feature-engineering-will-change-the-way-you-do-machine-learning-5c15bf188b96
+Íá äïêéìÜóù Hands on üëá ôá open source åñãáëåßá.
+
+
+
